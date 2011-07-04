@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+
 =begin rdoc
 
 = SixArm.com » Ruby » MagicNumberType
@@ -26,7 +27,7 @@ Typical uses of magic numbers:
   - to check if a web form file upload matches its HTTP content type
 
 Compare:
-  - MIME::Types ruby library 
+  - MIME::Types ruby library
   - Unix magic() command for testing files on disk
   - http://shared-mime.rubyforge.org/
 
@@ -100,7 +101,7 @@ class IO
   #  - :bitmap = Bitmap image file, typical extension ".bmp"
   #  - :gzip = Unix GZIP compressed data, typical extension ".gz"
   #  - :postscript = Postscript pages, typical extension ".ps"
-  # 
+  #
   # Return nil if there's no match for any known magic number.
   #
   # Example:
