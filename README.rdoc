@@ -1,6 +1,6 @@
 = SixArm.com » Ruby » MagicNumberType infers mime types from leading bits
 
-Author:: Joel Parker Henderson, joelparkerhenderson@gmail.com
+Author:: Joel Parker Henderson, joel@joelparkerhenderson.com
 Copyright:: Copyright (c) 2010 Joel Parker Henderson
 License:: See LICENSE.txt file
 
