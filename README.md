@@ -1,7 +1,7 @@
 # SixArm.com » Ruby » <br> MagicNumberType infers mime types from leading bits
 
-* Docs: <http://sixarm.com/sixarm_ruby_magic_number_types/doc>
-* Repo: <http://github.com/sixarm/sixarm_ruby_magic_number_types>
+* Docs: <http://sixarm.com/sixarm_ruby_magic_number_type/doc>
+* Repo: <http://github.com/sixarm/sixarm_ruby_magic_number_type>
 * Email: Joel Parker Henderson, <joel@sixarm.com>
 
 
@@ -14,7 +14,7 @@ which uniquely identify the type of file or data stream.
 For example when the first bits are "BM",
 this identifies the file as a bitmap image file.
 
-For docs go to <http://sixarm.com/sixarm_ruby_magic_number_types/doc>
+For docs go to <http://sixarm.com/sixarm_ruby_magic_number_type/doc>
 
 Want to help? We're happy to get pull requests.
 

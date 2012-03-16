@@ -1,36 +1,6 @@
 # -*- coding: utf-8 -*-
-
 =begin rdoc
-
-= SixArm.com » Ruby » MagicNumberType
-
-Author:: Joel Parker Henderson, joelparkerhenderson@gmail.com
-Copyright:: Copyright (c) 2010 Joel Parker Henderson
-License:: See LICENSE.txt file
-
-MagicNumberType infers a data type from the data's leading bytes.
-
-It infers based on widespread programming conventions for data file formats.
-
-Magic numbers are the first bits of a file or data stream
-which uniquely identify the type of file or data stream.
-
-For example when the first bits are "BM",
-this identifies the file as a bitmap image file.
-
-These magic numbers are by convention and we are using this guide:
-http://www.astro.keele.ac.uk/oldusers/rno/Computing/File_magic.html
-
-Typical uses of magic numbers:
-  - to quickly identify a file's data type
-  - to check if data matches the file's MIME type or extension
-  - to check if a web form file upload matches its HTTP content type
-
-Compare:
-  - MIME::Types ruby library
-  - Unix magic() command for testing files on disk
-  - http://shared-mime.rubyforge.org/
-
+Please see README
 =end
 
 require 'pp'

@@ -1,4 +1,3 @@
-
 Gem::Specification.new do |s|
 
   s.name              = "sixarm_ruby_magic_number_type"
@@ -27,7 +26,6 @@ Gem::Specification.new do |s|
                          'sample.xcf.bz2',
                          'sample.xcf.gz'
                        ]
-
 
   top_files           = [".gemtest", "CHANGELOG.txt", "INSTALL.txt", "LICENSE.txt", "Rakefile", "README.md", "VERSION"]
   lib_files           = ["lib/#{s.name}.rb"]
