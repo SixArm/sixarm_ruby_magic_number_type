@@ -2,7 +2,7 @@ Gem::Specification.new do |s|
 
   s.name              = "sixarm_ruby_magic_number_type"
   s.summary           = "SixArm.com » Ruby » Magic number type inspects bytes to decide on a mime type"
-  s.version           = "1.0.0"
+  s.version           = "1.1.0"
   s.author            = "SixArm"
   s.email             = "sixarm@sixarm.com"
   s.homepage          = "http://sixarm.com/"
@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.has_rdoc          = true
 
   CLASSES             = []
-  TEST_FILES          = [
+  TESTERS             = [
                          'sample.fit',
                          'sample.gif',
                          'sample.jpg',
@@ -27,7 +27,7 @@ Gem::Specification.new do |s|
                          'sample.xcf.gz'
                        ]
 
-  top_files           = [".gemtest", "CHANGELOG.txt", "INSTALL.txt", "LICENSE.txt", "Rakefile", "README.md", "VERSION"]
+  top_files           = [".gemtest", "Rakefile", "README.md", "VERSION"]
   lib_files           = ["lib/#{s.name}.rb"]
   test_files          = ["test/#{s.name}_test.rb"] + TESTERS.map{|x| "test/#{s.name}_test/#{x}_test.rb"} +
 

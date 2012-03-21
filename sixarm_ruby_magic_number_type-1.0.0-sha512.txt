@@ -1,1 +1,0 @@
-37a5a534a8c35b9477d7ee7ec9f0dba5c87ceaa9fcdd6065d2ed7ea2fe5666b9a2f2ac639b97a9bbc2fb35b65473f789688694dcab23eed98359f70f9814e227  sixarm_ruby_magic_number_type-1.0.0.gem
