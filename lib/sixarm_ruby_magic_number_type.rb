@@ -64,6 +64,9 @@ class IO
     [0xD0,0xCF,0x11,0xE0].pack('c*') => :docfile
   }
 
+  MagicNumberMaxLength = 9  # Longest key
+
+
   # Detect the data type by checking various "magic number" conventions
   # for the introductory bytes of a data stream
   #
@@ -83,9 +86,12 @@ class IO
   #  - IO::MagicNumberTypeHash
   #  - File.magic_number_type
 
-  def magic_number_type(bytes=self.read(9))
-    MagicNumberTypeHash.each_pair do |byte_string,type_symbol|
-      return type_symbol if byte_string==bytes[0,byte_string.length]
+  def magic_number_type
+    bytes = ""
+    while bytes.size < 9 #MagicNumberMaxLengh
+      bytes += read(1)
+      type = MagicNumberTypeHash[bytes]
+      return type if type 
     end
     return nil
   end
