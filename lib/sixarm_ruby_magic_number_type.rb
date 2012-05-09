@@ -3,8 +3,6 @@
 Please see README
 =end
 
-require 'pp'
-
 class IO
 
   # We implement magic by using a lookup hash.
@@ -29,6 +27,10 @@ class IO
   #  - File.magic_number_type
 
   MagicNumberTypeHash = {
+    "<!doctyp" => :html,
+    "<html" => :html,
+    "<?xml" => :xml,
+    "<MakerFile" => :adobe_framemaker,
     "BC" => :bitcode,
     "BM" => :bitmap,
     "BZ" => :bzip,
@@ -36,35 +38,70 @@ class IO
     "SIMPLE"=> :fits,
     "GIF8" => :gif,
     "GKSM" => :gks,
-    [0x01,0xDA].pack('c*') => :iris_rgb,
-    [0xF1,0x00,0x40,0xBB].pack('c*') => :itc,
-    [0xFF,0xD8].pack('c*') => :jpeg,
+    "\x01\xDA" => :iris_rgb,
+    "\xF1\x00\x40\xBB" => :itc,
+    "\xFF\xD8" => :jpeg,
     "IIN1" => :niff,
     "MThd" => :midi,
     "%PDF" => :pdf,
     "VIEW" => :pm,
-    [0x89].pack('c*') + "PNG" => :png,
+    "\x89PNG" => :png,
     "%!" => :postscript,
-    "Y" + [0xA6].pack('c*') + "j" + [0x95].pack('c*') => :sun_rasterfile,
-    "MM*" + [0x00].pack('c*') => :tiff,
-    "II*" + [0x00].pack('c*') => :tiff,
+    "Y\xA6j\x95" => :sun_rasterfile,
+    "MM*\x00" => :tiff,
+    "II\x00" => :tiff,
     "gimp xcf" => :gimp_xcf,
     "#FIG" => :xfig,
     "/* XPM */" => :xpm,
-    [0x23,0x21].pack('c*') => :shebang,
-    [0x1F,0x9D].pack('c*') => :compress,
-    [0x1F,0x8B].pack('c*') => :gzip,
-    "PK" + [0x03,0x04].pack('c*') => :pkzip,
+    "\x23\x21" => :shebang,
+    "\x1F\x9D" => :compress,
+    "\x1F\x8B" => :gzip,
+    "\x1F\xA0" => :tar_file_using_lzh_compression
+    "PK\x03\x04" => :pkzip,
+    "7Z\xBC\xAF\x27\x1C" => :7zip,
     "MZ" => :dos_os2_windows_executable,
     ".ELF" => :unix_elf,
-    [0x99,0x00].pack('c*') => :pgp_public_ring,
-    [0x95,0x01].pack('c*') => :pgp_security_ring,
-    [0x95,0x00].pack('c*') => :pgp_security_ring,
-    [0xA6,0x00].pack('c*') => :pgp_encrypted_data,
-    [0xD0,0xCF,0x11,0xE0].pack('c*') => :docfile
+    "\x99\x00" => :pgp_public_ring,
+    "\x95\x01" => :pgp_security_ring,
+    "\x95\x00" => :pgp_security_ring,
+    "\xA6\x00" => :pgp_encrypted_data,
+    "\xD0\xCF\x11\xE0" => :docfile,
+    "\x1A\x45\xDF\xA3\x93\x42\x82\x88matroska" => :matroska_stream,
+    ".RTS COMPRESSED IMAGE" => :runtime_software_disk_image,
+    "WS" => :wordstar_document,
+    "!BDN" => :microsoft_outlook_personal_folder_file,
+    "# Disk Descripto" => :vmware_disk_description,
+    "# Microsoft Developer Studio" => :microsoft_developer_studio,
+    "#!AMR" => :adaptive_multi_rate,
+    "#?RADIANCE." => :radiance_high_dynamic_range_image_file,
+    "%!PS-Adobe-3.0 EPSF-3.0" => :encapsulated_postscript,
+    "8BPS" => :adobe_photoshop,
+    "\x00\xBF" => :adobe_flash_shared_object,  # Typically a flash cookie
+    "\x00\x00\x00\x14ftypisom" => :iso_base_media,  # ISO Base Media file (MPEG-4) v1
+    "\x00\x00\x00\x14ftypqt" => :quicktime_movie,
+    "\x00\x00\x00\x14fty3gp5" => :mpeg4_video,
+    "\x00\x00\x00\x14ftymp42" => :mpeg4_video_quicktime,
+    "\x00\x00\x00\x14ftyM4A" => :app_lossless_audio_codec,
+    "\x00\x01\x00\x00MYISAM DATABASE" => :msisam_database,  # e.g. Microsoft Money
+    "\x00\x01\x00\x00Standard ACE DB" => :microsoft_access_ace_db,
+    "\x00\x01\x00\x00Standard Jet DB" => :microsoft_access_jet_db,
+    "\x00\x01BA" => :palm_address_book,
+    "\x00\x01BD" => :palm_date_book,
+    "\x01\x0F\x00\x00" => :microsoft_sql_server_2000,
+    "(This file must be converted with BinHex" => :binhex,
+    "***  Installation Started" => :symantec_wise_installer_log_file,
+    ".REC" => :realplayer_video,
+    ".RMF" => :realplayer_media,
+    "01ORDNANCE SURVEY" => :national_transfer_format_map,
+    "\x31\xBE" => :microsoft_write,
+    "\x32\xBE" => :microsoft_write,
+    "4\xCD\xB2\xA1" => :tcpdump,
+    ":VERSION" => :surfplan_kite_project,
+    "AC10" => :autocad,
+    .snd" => /Sun Microsystems µ-Law audio file4
   }
 
-  MagicNumberMaxLength = 9  # Longest key
+  MagicNumberMaxLength = 41  # Longest key
 
 
   # Detect the data type by checking various "magic number" conventions
@@ -88,7 +125,7 @@ class IO
 
   def magic_number_type
     bytes = ""
-    while bytes.size < 9 #MagicNumberMaxLengh
+    while bytes.size < 41 #MagicNumberMaxLengh
       bytes += read(1)
       type = MagicNumberTypeHash[bytes]
       return type if type 

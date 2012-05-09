@@ -2,7 +2,7 @@ Gem::Specification.new do |s|
 
   s.name              = "sixarm_ruby_magic_number_type"
   s.summary           = "SixArm.com » Ruby » Magic number type inspects bytes to decide on a mime type"
-  s.version           = "1.1.0"
+  s.version           = "1.2.0"
   s.author            = "SixArm"
   s.email             = "sixarm@sixarm.com"
   s.homepage          = "http://sixarm.com/"

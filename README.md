@@ -19,32 +19,15 @@ For docs go to <http://sixarm.com/sixarm_ruby_magic_number_type/doc>
 Want to help? We're happy to get pull requests.
 
 
-## Install quickstart
+## Quickstart
 
 Install:
 
     gem install sixarm_ruby_magic_number_type
 
-Bundler:
+Gemfile:
 
-    gem "sixarm_ruby_magic_number_type", "~>1.0.0"
-
-Require:
-
-    require "sixarm_ruby_magic_number_type"
-
-
-## Install with security (optional)
-
-To enable high security for all our gems:
-
-    wget http://sixarm.com/sixarm.pem
-    gem cert --add sixarm.pem
-    gem sources --add http://sixarm.com
-
-To install with high security:
-
-    gem install sixarm_ruby_ --test --trust-policy HighSecurity
+    gem "sixarm_ruby_magic_number_type", "~>1.2.0"
 
 
 ## Details
@@ -69,7 +52,10 @@ Compare:
 
 ## Changes
 
-* 2012-03-14 1.0.0 Update docs, tests
+* 2012-04-20 1.2.0 Upgrade to much faster algorithm
+* 2012-03-14 1.1.0 Update docs, tests
+
+
 ## License
 
 You may choose any of these open source licenses:
