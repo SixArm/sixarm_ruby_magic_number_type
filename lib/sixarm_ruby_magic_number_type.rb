@@ -56,9 +56,9 @@ class IO
     "\x23\x21" => :shebang,
     "\x1F\x9D" => :compress,
     "\x1F\x8B" => :gzip,
-    "\x1F\xA0" => :tar_file_using_lzh_compression
+    "\x1F\xA0" => :tar_file_using_lzh_compression,
     "PK\x03\x04" => :pkzip,
-    "7Z\xBC\xAF\x27\x1C" => :7zip,
+    "7Z\xBC\xAF\x27\x1C" => :seven_zip,
     "MZ" => :dos_os2_windows_executable,
     ".ELF" => :unix_elf,
     "\x99\x00" => :pgp_public_ring,
@@ -98,7 +98,7 @@ class IO
     "4\xCD\xB2\xA1" => :tcpdump,
     ":VERSION" => :surfplan_kite_project,
     "AC10" => :autocad,
-    .snd" => /Sun Microsystems µ-Law audio file4
+    ".snd" => :sun_microsystems_law_audio_file
   }
 
   MagicNumberMaxLength = 41  # Longest key
@@ -128,7 +128,7 @@ class IO
     while bytes.size < 41 #MagicNumberMaxLengh
       bytes += read(1)
       type = MagicNumberTypeHash[bytes]
-      return type if type 
+      return type if type
     end
     return nil
   end
@@ -155,4 +155,3 @@ class File
   end
 
 end
-
