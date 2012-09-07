@@ -27,7 +27,7 @@ Install:
 
 Gemfile:
 
-    gem "sixarm_ruby_magic_number_type", "~>1.2.0"
+    gem "sixarm_ruby_magic_number_type", "~>2.0.0"
 
 
 ## Details
@@ -52,6 +52,7 @@ Compare:
 
 ## Changes
 
+* 2012-09-08 2.0.0 Upgrade with more formats, samples, classes, and hex packing
 * 2012-04-20 1.2.0 Upgrade to much faster algorithm
 * 2012-03-14 1.1.0 Update docs, tests
 

@@ -3,7 +3,7 @@ Gem::Specification.new do |s|
 
   s.name              = "sixarm_ruby_magic_number_type"
   s.summary           = "SixArm.com » Ruby » Magic number type inspects bytes to decide on a mime type"
-  s.version           = "1.2.0"
+  s.version           = "2.0.0"
   s.author            = "SixArm"
   s.email             = "sixarm@sixarm.com"
   s.homepage          = "http://sixarm.com/"
@@ -14,8 +14,10 @@ Gem::Specification.new do |s|
   s.require_path      = 'lib'
   s.has_rdoc          = true
 
-  CLASSES             = []
-  TESTERS             = [
+  CLASSES             = ['file','io','string']
+  SAMPLES             = [
+  		      	 'sample.html',
+			 'sample.xml',
                          'sample.fit',
                          'sample.gif',
                          'sample.jpg',
@@ -24,13 +26,13 @@ Gem::Specification.new do |s|
                          'sample.ras',
                          'sample.sgi',
                          'sample.tiff',
-                         'sample.xcf.bz2',
-                         'sample.xcf.gz'
+                         'sample.bz2',
+                         'sample.gz'
                        ]
 
   top_files           = [".gemtest", "Rakefile", "README.md", "VERSION"]
-  lib_files           = ["lib/#{s.name}.rb"]
-  test_files          = [] #"test/#{s.name}_test.rb"] + TESTERS.map{|x| "test/#{s.name}_test/#{x}_test.rb"} +
+  lib_files           = ["lib/#{s.name}.rb"] + CLASSES.map{|x| "lib/#{s.name}/#{x}.rb"} 
+  test_files          = ["test/#{s.name}_test.rb"] + CLASSES.map{|x| "test/#{s.name}_test/#{x}.rb"} + SAMPLES.map{|x| "test/#{s.name}_test/#samples/#{x}"} 
 
   s.files             = top_files + lib_files + test_files
   s.test_files        = test_files
