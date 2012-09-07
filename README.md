@@ -1,6 +1,7 @@
 # SixArm.com » Ruby » <br> MagicNumberType infers mime types from leading bits
 
-* Docs: <http://sixarm.com/sixarm_ruby_magic_number_type/doc>
+* Doc: <http://sixarm.com/sixarm_ruby_magic_number_type/doc>
+* Gem: <http://rubygems.org/gems/sixarm_ruby_magic_number_type>
 * Repo: <http://github.com/sixarm/sixarm_ruby_magic_number_type>
 * Email: Joel Parker Henderson, <joel@sixarm.com>
 
@@ -19,7 +20,7 @@ For docs go to <http://sixarm.com/sixarm_ruby_magic_number_type/doc>
 Want to help? We're happy to get pull requests.
 
 
-## Quickstart
+## Install quickstart
 
 Install:
 
@@ -28,6 +29,23 @@ Install:
 Gemfile:
 
     gem "sixarm_ruby_magic_number_type", "~>2.0.0"
+
+Require:
+
+    require "sixarm_ruby_magic_number_type"
+
+
+## Install with security (optional)
+
+To enable high security for all our gems:
+
+    wget http://sixarm.com/sixarm.pem
+    gem cert --add sixarm.pem
+    gem sources --add http://sixarm.com
+
+To install with high security:
+
+    gem install sixarm_ruby_magic_number_type --test --trust-policy HighSecurity
 
 
 ## Details
