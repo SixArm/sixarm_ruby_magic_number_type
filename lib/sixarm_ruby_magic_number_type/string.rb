@@ -56,7 +56,7 @@ class String
     "\x1F\xA0" => :tar_file_using_lzh_compression,
     "PK\x03\x04" => :pkzip,
     "7Z\xBC\xAF\x27\x1C" => :seven_zip,
-    "MZ" => :dos_os2_windows_executable,
+    # "MZ" => :dos_os2_windows_executable,  # Duplicate to line 36 above, Ruby 2.2 gives a warning
     ".ELF" => :unix_elf,
     "\x99\x00" => :pgp_public_ring,
     "\x95\x01" => :pgp_security_ring,
