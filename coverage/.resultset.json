@@ -1,7 +1,7 @@
 {
   "Unit Tests": {
     "coverage": {
-      "/home/sixarm/git/sixarm_ruby_magic_number_type/test/sixarm_ruby_magic_number_type_test/file_test.rb": [
+      "/Users/joel/git/sixarm_ruby_magic_number_type/test/sixarm_ruby_magic_number_type_test/file_test.rb": [
         null,
         1,
         1,
@@ -38,7 +38,7 @@
         null,
         null
       ],
-      "/home/sixarm/git/sixarm_ruby_magic_number_type/lib/sixarm_ruby_magic_number_type.rb": [
+      "/Users/joel/git/sixarm_ruby_magic_number_type/lib/sixarm_ruby_magic_number_type.rb": [
         null,
         null,
         null,
@@ -48,7 +48,7 @@
         3,
         null
       ],
-      "/home/sixarm/git/sixarm_ruby_magic_number_type/lib/sixarm_ruby_magic_number_type/file.rb": [
+      "/Users/joel/git/sixarm_ruby_magic_number_type/lib/sixarm_ruby_magic_number_type/file.rb": [
         null,
         null,
         1,
@@ -74,7 +74,7 @@
         null,
         null
       ],
-      "/home/sixarm/git/sixarm_ruby_magic_number_type/lib/sixarm_ruby_magic_number_type/io.rb": [
+      "/Users/joel/git/sixarm_ruby_magic_number_type/lib/sixarm_ruby_magic_number_type/io.rb": [
         null,
         null,
         1,
@@ -109,7 +109,7 @@
         null,
         null
       ],
-      "/home/sixarm/git/sixarm_ruby_magic_number_type/lib/sixarm_ruby_magic_number_type/string.rb": [
+      "/Users/joel/git/sixarm_ruby_magic_number_type/lib/sixarm_ruby_magic_number_type/string.rb": [
         null,
         null,
         null,
@@ -138,7 +138,6 @@
         null,
         null,
         1,
-        null,
         null,
         null,
         null,
@@ -243,26 +242,24 @@
         null,
         1,
         null,
+        null
+      ],
+      "/Users/joel/git/sixarm_ruby_magic_number_type/test/sixarm_ruby_magic_number_type_test/io_test.rb": [
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
         null,
         null,
         null
       ],
-      "/home/sixarm/git/sixarm_ruby_magic_number_type/test/sixarm_ruby_magic_number_type_test/io_test.rb": [
-        null,
-        1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/home/sixarm/git/sixarm_ruby_magic_number_type/test/sixarm_ruby_magic_number_type_test/string_test.rb": [
+      "/Users/joel/git/sixarm_ruby_magic_number_type/test/sixarm_ruby_magic_number_type_test/string_test.rb": [
         null,
         1,
         1,
@@ -273,7 +270,6 @@
         1,
         null,
         1,
-        null,
         null,
         null,
         null,
@@ -359,6 +355,6 @@
         null
       ]
     },
-    "timestamp": 1346996899
+    "timestamp": 1420525154
   }
 }

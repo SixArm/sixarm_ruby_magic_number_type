@@ -16,7 +16,6 @@ describe String do
       "BC" => :bitcode,
       "BM" => :bitmap,
       "BZ" => :bzip,
-      "MZ" => :exe,
       "SIMPLE"=> :fits,
       "GIF8" => :gif,
       "GKSM" => :gks,
@@ -27,7 +26,7 @@ describe String do
       "MThd" => :midi,
       "%PDF" => :pdf,
       "VIEW" => :pm,
-      ["89504E470D0A1A0A"].pack('H*') => :png, 
+      ["89504E470D0A1A0A"].pack('H*') => :png,
       "Y" + ["A6"].pack('H*') + "j" + ["95"].pack('H*') => :sun_rasterfile,
       "II" + ["2A00"].pack('H*') => :tiff,  # II means Intel format, then 42 little-endian
       "MM" + ["002A"].pack('H*') => :tiff,  # MM means Motorola format, then 42 big-endian
