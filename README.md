@@ -1,4 +1,4 @@
-# SixArm.com » Ruby » <br> MagicNumberType infers mime types from leading bits
+# Ruby » <br> MagicNumberType infers mime types from leading bits
 
 * Doc: <http://sixarm.com/sixarm_ruby_magic_number_type/doc>
 * Gem: <http://rubygems.org/gems/sixarm_ruby_magic_number_type>
