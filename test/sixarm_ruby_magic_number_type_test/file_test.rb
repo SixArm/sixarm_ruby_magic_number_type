@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-require 'minitest/autorun'
-require 'simplecov'
+require "minitest/autorun"
+require "simplecov"
 SimpleCov.start
-require 'sixarm_ruby_magic_number_type'
+require "sixarm_ruby_magic_number_type"
 
 describe File do
 
