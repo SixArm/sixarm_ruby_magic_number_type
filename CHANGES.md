@@ -1,5 +1,6 @@
 # Changes
 
+* 2015-07-07 2.0.3 Update gemspec to use file manifest
 * 2015-01-05 2.0.2 Unify duplicate "MZ" to one value - thanks to Kip Cole
 * 2015-01-04 2.0.1 Updates for Ruby 2.2: signing certificate, gemspec, tilde version
 * 2012-09-08 2.0.0 Upgrade with more formats, samples, classes, and hex packing
