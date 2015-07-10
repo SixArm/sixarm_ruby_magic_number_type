@@ -20,11 +20,7 @@ Gem::Specification.new do |s|
   s.has_rdoc       = true
 
   s.files = [
-    ".gemtest",
-    "CONTRIBUTING.md",
     "Rakefile",
-    "README.md",
-    "VERSION",
     "lib/sixarm_ruby_magic_number_type.rb",
     "lib/sixarm_ruby_magic_number_type/file.rb",
     "lib/sixarm_ruby_magic_number_type/io.rb",
