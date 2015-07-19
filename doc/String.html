@@ -6,18 +6,18 @@
 <title>
   Class: String
   
-    &mdash; Documentation by YARD 0.8.1
+    &mdash; Documentation by YARD 0.8.7.6
   
 </title>
 
-  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
 
-  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   hasFrames = window.top.frames.main ? true : false;
   relpath = '';
-  framesUrl = "frames.html#!" + escape(window.location.href);
+  framesUrl = "frames.html#!String.html";
 </script>
 
 
@@ -127,12 +127,13 @@ indicates the magic type.</p>
 
 <p>See:</p>
 
-<pre class="code ruby"><code><span class='op'>-</span> <span class='const'>IO</span><span class='comment'>#magic_number_type
-</span><span class='op'>-</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_magic_number_type'>magic_number_type</span></code></pre>
+<pre class="code ruby"><code class="ruby"><span class='op'>-</span> <span class='const'>IO</span><span class='comment'>#magic_number_type
+</span><span class='op'>-</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_magic_number_type'>magic_number_type</span>
+</code></pre>
 
 <p>Quirks:</p>
 
-<pre class="code ruby"><code>- JPEG adjustment:
+<pre class="code ruby"><code class="ruby">- JPEG adjustment:
   - Some cameras put JPEG Exif data in bytes 3 &amp; 4,
     so we only check the first two bytes of a JPEG.
 - TIFF has two possible matches:
@@ -157,26 +158,25 @@ indicates the magic type.</p>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>BC</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='symbol'>:bitcode</span><span class='comma'>,</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>BM</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='symbol'>:bitmap</span><span class='comma'>,</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>BZ</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='symbol'>:bzip</span><span class='comma'>,</span>
-  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>MZ</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='symbol'>:exe</span><span class='comma'>,</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SIMPLE</span><span class='tstring_end'>&quot;</span></span><span class='op'>=&gt;</span> <span class='symbol'>:fits</span><span class='comma'>,</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>GIF8</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='symbol'>:gif</span><span class='comma'>,</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>GKSM</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='symbol'>:gks</span><span class='comma'>,</span>
-  <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>01DA</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>H*</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span> <span class='op'>=&gt;</span> <span class='symbol'>:iris_rgb</span><span class='comma'>,</span>
-  <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>F10040BB</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>H*</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span> <span class='op'>=&gt;</span> <span class='symbol'>:itc</span><span class='comma'>,</span>
-  <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>FFD8</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>H*</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span> <span class='op'>=&gt;</span> <span class='symbol'>:jpeg</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>01DA</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>H*</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='op'>=&gt;</span> <span class='symbol'>:iris_rgb</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>F10040BB</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>H*</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='op'>=&gt;</span> <span class='symbol'>:itc</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>FFD8</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>H*</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='op'>=&gt;</span> <span class='symbol'>:jpeg</span><span class='comma'>,</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>IIN1</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='symbol'>:niff</span><span class='comma'>,</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>MThd</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='symbol'>:midi</span><span class='comma'>,</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>%PDF</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='symbol'>:pdf</span><span class='comma'>,</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>VIEW</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='symbol'>:pm</span><span class='comma'>,</span>
-  <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>89504E470D0A1A0A</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>H*</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span> <span class='op'>=&gt;</span> <span class='symbol'>:png</span><span class='comma'>,</span> 
-  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Y</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>A6</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>H*</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>j</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>95</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>H*</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span> <span class='op'>=&gt;</span> <span class='symbol'>:sun_rasterfile</span><span class='comma'>,</span>
-  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>II</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>2A00</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>H*</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span> <span class='op'>=&gt;</span> <span class='symbol'>:tiff</span><span class='comma'>,</span>  <span class='comment'># II means Intel format, then 42 little-endian                                                                                                                                                                                 
-</span>  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>MM</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>002A</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>H*</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span> <span class='op'>=&gt;</span> <span class='symbol'>:tiff</span><span class='comma'>,</span>  <span class='comment'># MM means Motorola format, then 42 big-endian  
+  <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>89504E470D0A1A0A</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>H*</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='op'>=&gt;</span> <span class='symbol'>:png</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Y</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>A6</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>H*</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>j</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>95</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>H*</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='op'>=&gt;</span> <span class='symbol'>:sun_rasterfile</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>II</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>2A00</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>H*</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='op'>=&gt;</span> <span class='symbol'>:tiff</span><span class='comma'>,</span>  <span class='comment'># II means Intel format, then 42 little-endian
+</span>  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>MM</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>002A</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>H*</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='op'>=&gt;</span> <span class='symbol'>:tiff</span><span class='comma'>,</span>  <span class='comment'># MM means Motorola format, then 42 big-endian
 </span>  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>gimp xcf</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='symbol'>:gimp_xcf</span><span class='comma'>,</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>#FIG</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='symbol'>:xfig</span><span class='comma'>,</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/* XPM */</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='symbol'>:xpm</span><span class='comma'>,</span>
-  <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1F9D</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>H*</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span> <span class='op'>=&gt;</span> <span class='symbol'>:compress</span><span class='comma'>,</span>
-  <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1F8B</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>H*</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span> <span class='op'>=&gt;</span> <span class='symbol'>:gzip</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1F9D</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>H*</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='op'>=&gt;</span> <span class='symbol'>:compress</span><span class='comma'>,</span>
+  <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1F8B</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>H*</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='op'>=&gt;</span> <span class='symbol'>:gzip</span><span class='comma'>,</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\x1F\xA0</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='symbol'>:tar_file_using_lzh_compression</span><span class='comma'>,</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>PK\x03\x04</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='symbol'>:pkzip</span><span class='comma'>,</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>7Z\xBC\xAF\x27\x1C</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='symbol'>:seven_zip</span><span class='comma'>,</span>
@@ -217,7 +217,7 @@ indicates the magic type.</p>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>01ORDNANCE SURVEY</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='symbol'>:national_transfer_format_map</span><span class='comma'>,</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\x31\xBE</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='symbol'>:microsoft_write</span><span class='comma'>,</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\x32\xBE</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='symbol'>:microsoft_write</span><span class='comma'>,</span>
-  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>4</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>CDB2A1</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>H*</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span> <span class='op'>=&gt;</span> <span class='symbol'>:tcpdump</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>4</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>CDB2A1</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_pack'>pack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>H*</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='op'>=&gt;</span> <span class='symbol'>:tcpdump</span><span class='comma'>,</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>:VERSION</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='symbol'>:surfplan_kite_project</span><span class='comma'>,</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>AC10</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='symbol'>:autocad</span><span class='comma'>,</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.snd</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='symbol'>:sun_microsystems_law_audio_file</span><span class='comma'>,</span>
@@ -277,7 +277,7 @@ indicates the magic type.</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Detect the data type by checking various "magic number" conventions for the
+<p>Detect the data type by checking various “magic number” conventions for the
 introductory bytes of a data stream.</p>
 </div></span>
   
@@ -305,20 +305,20 @@ introductory bytes of a data stream.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Detect the data type by checking various "magic number" conventions for the
+<p>Detect the data type by checking various “magic number” conventions for the
 introductory bytes of a data stream</p>
 
-<p>Return the "magic number" as a symbol:</p>
+<p>Return the “magic number” as a symbol:</p>
 
-<pre class="code ruby"><code>- :bitmap = Bitmap image file, typical extension &quot;.bmp&quot;
+<pre class="code ruby"><code class="ruby">- :bitmap = Bitmap image file, typical extension &quot;.bmp&quot;
 - :gzip = Unix GZIP compressed data, typical extension &quot;.gz&quot;
 - :postscript = Postscript pages, typical extension &quot;.ps&quot;</code></pre>
 
-<p>Return nil if there's no match for any known magic number.</p>
+<p>Return nil if there&#39;s no match for any known magic number.</p>
 
 <p>Examples:</p>
 
-<pre class="code ruby"><code>&quot;BM&quot;.magic_number_type =&gt; :bitmap
+<pre class="code ruby"><code class="ruby">&quot;BM&quot;.magic_number_type =&gt; :bitmap
 &quot;GIF8&quot;.magic_numer_type =&gt; :gif
 &quot;\xa6\x00&quot;.magic_number_type =&gt; :pgp_encrypted_data</code></pre>
 
@@ -336,15 +336,15 @@ introductory bytes of a data stream</p>
       <pre class="lines">
 
 
+124
 125
 126
 127
 128
-129
-130</pre>
+129</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_magic_number_type/string.rb', line 125</span>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_magic_number_type/string.rb', line 124</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_magic_number_type'>magic_number_type</span>
   <span class='const'>String</span><span class='op'>::</span><span class='const'>MagicNumberTypeHash</span><span class='period'>.</span><span class='id identifier rubyid_each_pair'>each_pair</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_byte_string'>byte_string</span><span class='comma'>,</span><span class='id identifier rubyid_type_symbol'>type_symbol</span><span class='op'>|</span>
@@ -362,9 +362,9 @@ introductory bytes of a data stream</p>
 </div>
 
     <div id="footer">
-  Generated on Wed Oct 31 21:35:32 2012 by
+  Generated on Sat Jul 18 20:33:39 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.1 (ruby-1.9.3).
+  0.8.7.6 (ruby-2.2.2).
 </div>
 
   </body>

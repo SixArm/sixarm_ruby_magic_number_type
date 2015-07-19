@@ -6,18 +6,18 @@
 <title>
   File: README
   
-    &mdash; Documentation by YARD 0.8.1
+    &mdash; Documentation by YARD 0.8.7.6
   
 </title>
 
-  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
 
-  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   hasFrames = window.top.frames.main ? true : false;
   relpath = '';
-  framesUrl = "frames.html#!" + escape(window.location.href);
+  framesUrl = "frames.html#!file.README.html";
 </script>
 
 
@@ -61,124 +61,95 @@
 
     <iframe id="search_frame"></iframe>
 
-    <div id="content"><div id='filecontents'><h1>SixArm.com » Ruby » <br> MagicNumberType infers mime types from leading bits</h1>
+    <div id="content"><div id='filecontents'>
+<h1 id="label-Ruby+-C2-BB++MagicNumberType+infers+mime+types+from+leading+bits">Ruby » <br> MagicNumberType infers mime types from leading bits</h1>
+<ul><li>
+<p>Doc: <a
+href="http://sixarm.com/sixarm_ruby_magic_number_type/doc">sixarm.com/sixarm_ruby_magic_number_type/doc</a></p>
+</li><li>
+<p>Gem: <a
+href="http://rubygems.org/gems/sixarm_ruby_magic_number_type">rubygems.org/gems/sixarm_ruby_magic_number_type</a></p>
+</li><li>
+<p>Repo: <a
+href="http://github.com/sixarm/sixarm_ruby_magic_number_type">github.com/sixarm/sixarm_ruby_magic_number_type</a>
+&lt;!–HEADER-SHUT–&gt;</p>
+</li></ul>
 
-<ul>
-<li>Doc: <a href="http://sixarm.com/sixarm_ruby_magic_number_type/doc">http://sixarm.com/sixarm_ruby_magic_number_type/doc</a></li>
-<li>Gem: <a href="http://rubygems.org/gems/sixarm_ruby_magic_number_type">http://rubygems.org/gems/sixarm_ruby_magic_number_type</a></li>
-<li>Repo: <a href="http://github.com/sixarm/sixarm_ruby_magic_number_type">http://github.com/sixarm/sixarm_ruby_magic_number_type</a></li>
-<li>Email: Joel Parker Henderson, <a href="mailto:joel@sixarm.com">joel@sixarm.com</a></li>
-</ul>
+<h2 id="label-Introduction">Introduction</h2>
 
-<h2>Introduction</h2>
+<p>Magic numbers are the first bits of a file or data stream which uniquely
+identify the type of file or data stream.</p>
 
-<p>Magic numbers are the first bits of a file or data stream
-which uniquely identify the type of file or data stream.</p>
+<p>For example when the first bits are “BM”, this identifies the file as a
+bitmap image file.</p>
 
-<p>For example when the first bits are &quot;BM&quot;,
-this identifies the file as a bitmap image file.</p>
-
-<p>For docs go to <a href="http://sixarm.com/sixarm_ruby_magic_number_type/doc">http://sixarm.com/sixarm_ruby_magic_number_type/doc</a></p>
+<p>For docs go to <a
+href="http://sixarm.com/sixarm_ruby_magic_number_type/doc">sixarm.com/sixarm_ruby_magic_number_type/doc</a></p>
 
 <p>Want to help? We&#39;re happy to get pull requests.</p>
+<!--INSTALL-OPEN-->
+<h2 id="label-Install">Install</h2>
 
-<h2>Install quickstart</h2>
+<p>To install using a Gemfile, add this:</p>
 
-<p>Install:</p>
-
-<pre class="code ruby"><code><span class='id identifier rubyid_gem'>gem</span> <span class='id identifier rubyid_install'>install</span> <span class='id identifier rubyid_sixarm_ruby_magic_number_type'>sixarm_ruby_magic_number_type</span>
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_gem'>gem</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sixarm_ruby_magic_number_type</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&gt;= 2.0.4</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt; 3</span><span class='tstring_end'>&quot;</span></span>
 </code></pre>
 
-<p>Gemfile:</p>
+<p>To install using the command line, run this:</p>
 
-<pre class="code ruby"><code><span class='id identifier rubyid_gem'>gem</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sixarm_ruby_magic_number_type</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>~&gt;2.0.0</span><span class='tstring_end'>&quot;</span></span>
+<pre class="code ruby"><code class="ruby">gem install sixarm_ruby_magic_number_type -v &quot;&gt;= 2.0.4, &lt; 3&quot;</code></pre>
+
+<p>To install using the command line with high security, run this:</p>
+
+<pre class="code ruby"><code class="ruby">wget http://sixarm.com/sixarm.pem
+gem cert --add sixarm.pem &amp;&amp; gem sources --add http://sixarm.com
+gem install sixarm_ruby_magic_number_type -v &quot;&gt;= 2.0.4, &lt; 3&quot; --trust-policy HighSecurity</code></pre>
+
+<p>To require the gem in your code:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sixarm_ruby_magic_number_type</span><span class='tstring_end'>&quot;</span></span>
 </code></pre>
+<!--INSTALL-SHUT-->
+<h2 id="label-Details">Details</h2>
 
-<p>Require:</p>
+<p>This gem infers based on widespread programming conventions for data file
+formats.</p>
 
-<pre class="code ruby"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sixarm_ruby_magic_number_type</span><span class='tstring_end'>&quot;</span></span>
-</code></pre>
-
-<h2>Install with security (optional)</h2>
-
-<p>To enable high security for all our gems:</p>
-
-<pre class="code ruby"><code>wget http://sixarm.com/sixarm.pem
-gem cert --add sixarm.pem
-gem sources --add http://sixarm.com
-</code></pre>
-
-<p>To install with high security:</p>
-
-<pre class="code ruby"><code>gem install sixarm_ruby_magic_number_type --test --trust-policy HighSecurity
-</code></pre>
-
-<h2>Details</h2>
-
-<p>This gem infers based on widespread programming conventions for data file formats.</p>
-
-<p>These magic numbers are by convention and we are using this guide:
-<a href="http://www.astro.keele.ac.uk/oldusers/rno/Computing/File_magic.html">http://www.astro.keele.ac.uk/oldusers/rno/Computing/File_magic.html</a></p>
+<p>These magic numbers are by convention and we are using this guide: <a
+href="http://www.astro.keele.ac.uk/oldusers/rno/Computing/File_magic.html">www.astro.keele.ac.uk/oldusers/rno/Computing/File_magic.html</a></p>
 
 <p>Typical uses of magic numbers:</p>
-
-<ul>
-<li>to quickly identify a file&#39;s data type</li>
-<li>to check if data matches the file&#39;s MIME type or extension</li>
-<li>to check if a web form file upload matches its HTTP content type</li>
-</ul>
+<ul><li>
+<p>to quickly identify a file&#39;s data type</p>
+</li><li>
+<p>to check if data matches the file&#39;s MIME type or extension</p>
+</li><li>
+<p>to check if a web form file upload matches its HTTP content type</p>
+</li></ul>
 
 <p>Compare:</p>
+<ul><li>
+<p>MIME::Types ruby library</p>
+</li><li>
+<p>Unix magic() command for testing files on disk</p>
+</li><li>
+<p><a href="http://shared-mime.rubyforge.org">shared-mime.rubyforge.org</a>/</p>
+</li></ul>
 
-<ul>
-<li>MIME::Types ruby library </li>
-<li>Unix magic() command for testing files on disk</li>
-<li><a href="http://shared-mime.rubyforge.org/">http://shared-mime.rubyforge.org/</a></li>
-</ul>
-
-<h2>Changes</h2>
-
-<ul>
-<li>2012-09-08 2.0.0 Upgrade with more formats, samples, classes, and hex packing</li>
-<li>2012-04-20 1.2.0 Upgrade to much faster algorithm</li>
-<li>2012-03-14 1.1.0 Update docs, tests</li>
-</ul>
-
-<h2>License</h2>
-
-<p>You may choose any of these open source licenses:</p>
-
-<ul>
-<li>Apache License</li>
-<li>BSD License</li>
-<li>CreativeCommons License, Non-commercial Share Alike</li>
-<li>GNU General Public License Version 2 (GPL 2)</li>
-<li>GNU Lesser General Public License (LGPL)</li>
-<li>MIT License</li>
-<li>Perl Artistic License</li>
-<li>Ruby License</li>
-</ul>
-
-<p>The software is provided &quot;as is&quot;, without warranty of any kind, 
-express or implied, including but not limited to the warranties of 
-merchantability, fitness for a particular purpose and noninfringement. </p>
-
-<p>In no event shall the authors or copyright holders be liable for any 
-claim, damages or other liability, whether in an action of contract, 
-tort or otherwise, arising from, out of or in connection with the 
-software or the use or other dealings in the software.</p>
-
-<p>This license is for the included software that is created by SixArm;
-some of the included software may have its own licenses, copyrights, 
-authors, etc. and these do take precedence over the SixArm license.</p>
-
-<p>Copyright (c) 2005-2012 Joel Parker Henderson</p>
+<h2 id="label-Contributors">Contributors</h2>
+<ul><li>
+<p><a href="https://github.com/joelparkerhenderson">Joel Parker Henderson</a></p>
+</li><li>
+<p><a href="https://github.com/billlazar">Bill Lazar</a></p>
+</li><li>
+<p><a href="https://github.com/kipcole9">Kip Cole</a></p>
+</li></ul>
 </div></div>
 
     <div id="footer">
-  Generated on Wed Oct 31 21:35:31 2012 by
+  Generated on Sat Jul 18 20:33:39 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.1 (ruby-1.9.3).
+  0.8.7.6 (ruby-2.2.2).
 </div>
 
   </body>

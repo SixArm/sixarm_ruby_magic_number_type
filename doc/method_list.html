@@ -15,11 +15,16 @@
       <script type="text/javascript" charset="utf-8" src="js/full_list.js"></script>
     
 
+    <title>Method List</title>
     <base id="base_target" target="_parent" />
   </head>
   <body>
     <script type="text/javascript" charset="utf-8">
-      if (window.top.frames.main) {
+      var hasFrames = false;
+      try {
+        hasFrames = window.top.frames.main ? true : false;
+      } catch (e) { }
+      if (hasFrames) {
         document.getElementById('base_target').target = 'main';
         document.body.className = 'frames';
       }
@@ -47,26 +52,20 @@
         
 
   <li class="r1 ">
-    <span class='object_link'><a href="IO.html#magic_number_type-instance_method" title="IO#magic_number_type (method)">#magic_number_type</a></span>
-    
-      <small>IO</small>
-    
+    <span class='object_link'><a href="File.html#magic_number_type-class_method" title="File.magic_number_type (method)">magic_number_type</a></span>
+    <small>File</small>
   </li>
   
 
   <li class="r2 ">
-    <span class='object_link'><a href="File.html#magic_number_type-class_method" title="File.magic_number_type (method)">magic_number_type</a></span>
-    
-      <small>File</small>
-    
+    <span class='object_link'><a href="IO.html#magic_number_type-instance_method" title="IO#magic_number_type (method)">#magic_number_type</a></span>
+    <small>IO</small>
   </li>
   
 
   <li class="r1 ">
     <span class='object_link'><a href="String.html#magic_number_type-instance_method" title="String#magic_number_type (method)">#magic_number_type</a></span>
-    
-      <small>String</small>
-    
+    <small>String</small>
   </li>
   
 

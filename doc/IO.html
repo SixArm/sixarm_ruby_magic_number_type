@@ -6,18 +6,18 @@
 <title>
   Class: IO
   
-    &mdash; Documentation by YARD 0.8.1
+    &mdash; Documentation by YARD 0.8.7.6
   
 </title>
 
-  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
 
-  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   hasFrames = window.top.frames.main ? true : false;
   relpath = '';
-  framesUrl = "frames.html#!" + escape(window.location.href);
+  framesUrl = "frames.html#!IO.html";
 </script>
 
 
@@ -132,7 +132,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Detect the data type by checking various "magic number" conventions for the
+<p>Detect the data type by checking various “magic number” conventions for the
 introductory bytes of a data stream.</p>
 </div></span>
   
@@ -160,27 +160,28 @@ introductory bytes of a data stream.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Detect the data type by checking various "magic number" conventions for the
+<p>Detect the data type by checking various “magic number” conventions for the
 introductory bytes of a data stream</p>
 
-<p>Return the "magic number" as a symbol:</p>
+<p>Return the “magic number” as a symbol:</p>
 
-<pre class="code ruby"><code>- :bitmap = Bitmap image file, typical extension &quot;.bmp&quot;
+<pre class="code ruby"><code class="ruby">- :bitmap = Bitmap image file, typical extension &quot;.bmp&quot;
 - :gzip = Unix GZIP compressed data, typical extension &quot;.gz&quot;
 - :postscript = Postscript pages, typical extension &quot;.ps&quot;</code></pre>
 
-<p>Return nil if there's no match for any known magic number.</p>
+<p>Return nil if there&#39;s no match for any known magic number.</p>
 
 <p>Example:</p>
 
-<pre class="code ruby"><code>IO.f = File.open(&quot;test.ps&quot;,&quot;rb&quot;)
+<pre class="code ruby"><code class="ruby">IO.f = File.open(&quot;test.ps&quot;,&quot;rb&quot;)
 put f.magic_number(s)
 =&gt; :postscript</code></pre>
 
 <p>See:</p>
 
-<pre class="code ruby"><code><span class='op'>-</span> <span class='const'>IO</span><span class='op'>::</span><span class='const'>MagicNumberTypeHash</span>
-<span class='op'>-</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_magic_number_type'>magic_number_type</span></code></pre>
+<pre class="code ruby"><code class="ruby"><span class='op'>-</span> <span class='const'>IO</span><span class='op'>::</span><span class='const'>MagicNumberTypeHash</span>
+<span class='op'>-</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_magic_number_type'>magic_number_type</span>
+</code></pre>
 
 <p>TODO change from hash implementation to binary tree</p>
 
@@ -222,9 +223,9 @@ put f.magic_number(s)
 </div>
 
     <div id="footer">
-  Generated on Wed Oct 31 21:35:31 2012 by
+  Generated on Sat Jul 18 20:33:39 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.1 (ruby-1.9.3).
+  0.8.7.6 (ruby-2.2.2).
 </div>
 
   </body>
