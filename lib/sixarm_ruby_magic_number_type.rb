@@ -4,5 +4,5 @@ Please see README
 =end
 
 ['file','io','string'].map{|x|
-  require File.dirname(__FILE__) + "/sixarm_ruby_magic_number_type/#{x}.rb"
+  require_relative "sixarm_ruby_magic_number_type/#{x}"
 }

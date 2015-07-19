@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.name           = "sixarm_ruby_magic_number_type"
   s.summary        = "SixArm.com » Ruby » Magic number type inspects bytes to decide on a mime type"
   s.description    = "Tool to parse the first bytes of a file and compare it to a list of known mime types."
-  s.version        = "2.0.3"
+  s.version        = "2.0.4"
 
   s.author         = "SixArm"
   s.email          = "sixarm@sixarm.com"
