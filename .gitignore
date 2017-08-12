@@ -1,6 +1,6 @@
 .bundle
 .coveralls.yml
-vendor
+//vendor//
 Gemfile.lock
 /coverage/
 /coverage.data
