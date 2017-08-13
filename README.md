@@ -1,4 +1,4 @@
-# SixArm.com » Ruby » <br> MagicNumberType infers mime types from leading bits
+# SixArm.com → Ruby → <br> MagicNumberType infers mime types from leading bits
 
 <!--HEADER-OPEN-->
 
@@ -11,9 +11,7 @@
 * Doc: <http://sixarm.com/sixarm_ruby_magic_number_type/doc>
 * Gem: <https://rubygems.org/gems/sixarm_ruby_magic_number_type>
 * Contact: Joel Parker Henderson, <joel@sixarm.com>
-* Changes: See CHANGES.md file.
-* License: See LICENSE.md file.
-* Helping: See CONTRIBUTING.md file.
+* Project: [Changes](CHANGES.md), [License](LICENSE.md), [Contributing](CONTRIBUTING.md).
 
 <!--HEADER-SHUT-->
 
@@ -35,23 +33,21 @@ Want to help? We're happy to get pull requests.
 
 ## Install
 
-To install using a Gemfile, add this:
+### Gem
 
-    gem "sixarm_ruby_magic_number_type", ">= 2.0.4", "< 3"
+Run this command in your shell or terminal:
 
-To install using the command line, run this:
+    gem install sixarm_ruby_magic_number_type
 
-    gem install sixarm_ruby_magic_number_type -v ">= 2.0.4, < 3"
+Or add this to your Gemfile:
 
-To install using the command line with high security, run this:
+    gem 'sixarm_ruby_magic_number_type'
 
-    wget http://sixarm.com/sixarm.pem
-    gem cert --add sixarm.pem && gem sources --add http://sixarm.com
-    gem install sixarm_ruby_magic_number_type -v ">= 2.0.4, < 3" --trust-policy HighSecurity
+### Require
 
 To require the gem in your code:
 
-    require "sixarm_ruby_magic_number_type"
+    require 'sixarm_ruby_magic_number_type'
 
 <!--INSTALL-SHUT-->
 
