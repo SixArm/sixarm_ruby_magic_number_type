@@ -1,5 +1,5 @@
-.bundle
-.coveralls.yml
+/.bundle
+/.yardoc
 /vendor/
 /Gemfile.lock
 /coverage/
