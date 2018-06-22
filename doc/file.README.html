@@ -1,12 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>
   File: README
   
-    &mdash; Documentation by YARD 0.8.7.6
+    &mdash; Documentation by YARD 0.9.14
   
 </title>
 
@@ -15,9 +15,8 @@
   <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  hasFrames = window.top.frames.main ? true : false;
+  pathId = "README";
   relpath = '';
-  framesUrl = "frames.html#!file.README.html";
 </script>
 
 
@@ -28,129 +27,129 @@
 
   </head>
   <body>
-    <div id="header">
-      <div id="menu">
+    <div class="nav_wrap">
+      <iframe id="nav" src="file_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
   
     <a href="_index.html">Index</a> &raquo; 
     <span class="title">File: README</span>
   
-
-  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
-      <div id="search">
+        <div id="search">
   
     <a class="full_list_link" id="class_list_link"
         href="class_list.html">
-      Class List
-    </a>
-  
-    <a class="full_list_link" id="method_list_link"
-        href="method_list.html">
-      Method List
-    </a>
-  
-    <a class="full_list_link" id="file_list_link"
-        href="file_list.html">
-      File List
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
     </a>
   
 </div>
-      <div class="clear"></div>
-    </div>
+        <div class="clear"></div>
+      </div>
 
-    <iframe id="search_frame"></iframe>
+      <div id="content"><div id='filecontents'><h1>SixArm.com → Ruby → <br> MagicNumberType infers mime types from leading bits</h1>
 
-    <div id="content"><div id='filecontents'>
-<h1 id="label-Ruby+-C2-BB++MagicNumberType+infers+mime+types+from+leading+bits">Ruby » <br> MagicNumberType infers mime types from leading bits</h1>
-<ul><li>
-<p>Doc: <a
-href="http://sixarm.com/sixarm_ruby_magic_number_type/doc">sixarm.com/sixarm_ruby_magic_number_type/doc</a></p>
-</li><li>
-<p>Gem: <a
-href="http://rubygems.org/gems/sixarm_ruby_magic_number_type">rubygems.org/gems/sixarm_ruby_magic_number_type</a></p>
-</li><li>
-<p>Repo: <a
-href="http://github.com/sixarm/sixarm_ruby_magic_number_type">github.com/sixarm/sixarm_ruby_magic_number_type</a>
-&lt;!–HEADER-SHUT–&gt;</p>
-</li></ul>
+<!--header-open-->
 
-<h2 id="label-Introduction">Introduction</h2>
+<p><a href="http://badge.fury.io/rb/sixarm_ruby_magic_number_type"><img src="https://badge.fury.io/rb/sixarm_ruby_magic_number_type.svg" alt="Gem Version"></a>
+<a href="https://travis-ci.org/SixArm/sixarm_ruby_magic_number_type"><img src="https://travis-ci.org/SixArm/sixarm_ruby_magic_number_type.png" alt="Build Status"></a>
+<a href="https://codeclimate.com/github/SixArm/sixarm_ruby_magic_number_type/maintainability"><img src="https://api.codeclimate.com/v1/badges/6430fd86f553be7f328a/maintainability" alt="Code Climate Maintainability"></a></p>
 
-<p>Magic numbers are the first bits of a file or data stream which uniquely
-identify the type of file or data stream.</p>
+<ul>
+<li>Git: <a href="https://github.com/sixarm/sixarm_ruby_magic_number_type">https://github.com/sixarm/sixarm_ruby_magic_number_type</a></li>
+<li>Doc: <a href="http://sixarm.com/sixarm_ruby_magic_number_type/doc">http://sixarm.com/sixarm_ruby_magic_number_type/doc</a></li>
+<li>Gem: <a href="https://rubygems.org/gems/sixarm_ruby_magic_number_type">https://rubygems.org/gems/sixarm_ruby_magic_number_type</a></li>
+<li>Contact: Joel Parker Henderson, <a href="mailto:joel@sixarm.com">joel@sixarm.com</a></li>
+<li>Project: <a href="CHANGES.md">changes</a>, <a href="LICENSE.md">license</a>, <a href="CONTRIBUTING.md">contributing</a>.</li>
+</ul>
 
-<p>For example when the first bits are “BM”, this identifies the file as a
-bitmap image file.</p>
+<!--header-shut-->
 
-<p>For docs go to <a
-href="http://sixarm.com/sixarm_ruby_magic_number_type/doc">sixarm.com/sixarm_ruby_magic_number_type/doc</a></p>
+<h2>Introduction</h2>
+
+<p>Magic numbers are the first bits of a file or data stream
+which uniquely identify the type of file or data stream.</p>
+
+<p>For example when the first bits are &quot;BM&quot;,
+this identifies the file as a bitmap image file.</p>
+
+<p>For docs go to <a href="http://sixarm.com/sixarm_ruby_magic_number_type/doc">http://sixarm.com/sixarm_ruby_magic_number_type/doc</a></p>
 
 <p>Want to help? We&#39;re happy to get pull requests.</p>
-<!--INSTALL-OPEN-->
-<h2 id="label-Install">Install</h2>
 
-<p>To install using a Gemfile, add this:</p>
+<!--install-open-->
 
-<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_gem'>gem</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sixarm_ruby_magic_number_type</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&gt;= 2.0.4</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt; 3</span><span class='tstring_end'>&quot;</span></span>
+<h2>Install</h2>
+
+<h3>Gem</h3>
+
+<p>Run this command in your shell or terminal:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_gem'>gem</span> <span class='id identifier rubyid_install'>install</span> <span class='id identifier rubyid_sixarm_ruby_magic_number_type'>sixarm_ruby_magic_number_type</span>
 </code></pre>
 
-<p>To install using the command line, run this:</p>
+<p>Or add this to your Gemfile:</p>
 
-<pre class="code ruby"><code class="ruby">gem install sixarm_ruby_magic_number_type -v &quot;&gt;= 2.0.4, &lt; 3&quot;</code></pre>
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_gem'>gem</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>sixarm_ruby_magic_number_type</span><span class='tstring_end'>&#39;</span></span>
+</code></pre>
 
-<p>To install using the command line with high security, run this:</p>
-
-<pre class="code ruby"><code class="ruby">wget http://sixarm.com/sixarm.pem
-gem cert --add sixarm.pem &amp;&amp; gem sources --add http://sixarm.com
-gem install sixarm_ruby_magic_number_type -v &quot;&gt;= 2.0.4, &lt; 3&quot; --trust-policy HighSecurity</code></pre>
+<h3>Require</h3>
 
 <p>To require the gem in your code:</p>
 
-<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sixarm_ruby_magic_number_type</span><span class='tstring_end'>&quot;</span></span>
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>sixarm_ruby_magic_number_type</span><span class='tstring_end'>&#39;</span></span>
 </code></pre>
-<!--INSTALL-SHUT-->
-<h2 id="label-Details">Details</h2>
 
-<p>This gem infers based on widespread programming conventions for data file
-formats.</p>
+<!--install-shut-->
 
-<p>These magic numbers are by convention and we are using this guide: <a
-href="http://www.astro.keele.ac.uk/oldusers/rno/Computing/File_magic.html">www.astro.keele.ac.uk/oldusers/rno/Computing/File_magic.html</a></p>
+<h2>Details</h2>
+
+<p>This gem infers based on widespread programming conventions for data file formats.</p>
+
+<p>These magic numbers are by convention and we are using this guide:
+<a href="http://www.astro.keele.ac.uk/oldusers/rno/Computing/File_magic.html">http://www.astro.keele.ac.uk/oldusers/rno/Computing/File_magic.html</a></p>
 
 <p>Typical uses of magic numbers:</p>
-<ul><li>
-<p>to quickly identify a file&#39;s data type</p>
-</li><li>
-<p>to check if data matches the file&#39;s MIME type or extension</p>
-</li><li>
-<p>to check if a web form file upload matches its HTTP content type</p>
-</li></ul>
+
+<ul>
+<li>to quickly identify a file&#39;s data type</li>
+<li>to check if data matches the file&#39;s MIME type or extension</li>
+<li>to check if a web form file upload matches its HTTP content type</li>
+</ul>
 
 <p>Compare:</p>
-<ul><li>
-<p>MIME::Types ruby library</p>
-</li><li>
-<p>Unix magic() command for testing files on disk</p>
-</li><li>
-<p><a href="http://shared-mime.rubyforge.org">shared-mime.rubyforge.org</a>/</p>
-</li></ul>
 
-<h2 id="label-Contributors">Contributors</h2>
-<ul><li>
-<p><a href="https://github.com/joelparkerhenderson">Joel Parker Henderson</a></p>
-</li><li>
-<p><a href="https://github.com/billlazar">Bill Lazar</a></p>
-</li><li>
-<p><a href="https://github.com/kipcole9">Kip Cole</a></p>
-</li></ul>
+<ul>
+<li>MIME::Types ruby library</li>
+<li>Unix magic() command for testing files on disk</li>
+<li><a href="http://shared-mime.rubyforge.org/">http://shared-mime.rubyforge.org/</a></li>
+</ul>
+
+<h2>Contributors</h2>
+
+<ul>
+<li><a href="https://github.com/joelparkerhenderson">Joel Parker Henderson</a></li>
+<li><a href="https://github.com/billlazar">Bill Lazar</a></li>
+<li><a href="https://github.com/kipcole9">Kip Cole</a></li>
+</ul>
 </div></div>
 
-    <div id="footer">
-  Generated on Sat Jul 18 20:33:39 2015 by
+      <div id="footer">
+  Generated on Fri Jun 22 00:10:00 2018 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 (ruby-2.2.2).
+  0.9.14 (ruby-2.5.1).
 </div>
 
+    </div>
   </body>
 </html>
