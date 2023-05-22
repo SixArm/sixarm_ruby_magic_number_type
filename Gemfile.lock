@@ -90,7 +90,7 @@ DEPENDENCIES
   flay (>= 2.12.0, < 3)
   flog (>= 4.6.2, < 5)
   minitest (>= 5.11.3, < 6)
-  rake (>= 12.3.1, < 13)
+  rake (>= 12.3.3, < 13)
   reek (>= 4.8.1, < 5)
   rubocop (>= 0.57.2, < 1)
   rubycritic (>= 3.4.0, < 4)
