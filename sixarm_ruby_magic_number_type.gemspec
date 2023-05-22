@@ -48,7 +48,7 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency("minitest", ">= 5.11.3", "< 6")
   s.add_development_dependency("sixarm_ruby_minitest_extensions", ">= 1.0.8", "< 2")
-  s.add_development_dependency("rake", ">= 12.3.1", "< 13")
+  s.add_development_dependency("rake", ">= 12.3.3", "< 13")
   s.add_development_dependency("simplecov", ">= 0.16.1", "< 2")
   s.add_development_dependency("flog", ">= 4.6.2", "< 5")
   s.add_development_dependency("flay", ">= 2.12.0", "< 3")
